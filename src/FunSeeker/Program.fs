@@ -1,7 +1,7 @@
-open Endbr.Cache
-open Endbr.BinUtil
-open Endbr.Disasm
-open Endbr.Report
+open FunSeeker.Cache
+open FunSeeker.BinUtil
+open FunSeeker.Disasm
+open FunSeeker.Report
 
 [<EntryPoint>]
 let main argv =

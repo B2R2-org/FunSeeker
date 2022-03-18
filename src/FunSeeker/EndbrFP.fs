@@ -1,11 +1,11 @@
-﻿module Endbr.EndbrFP
+﻿module FunSeeker.EndbrFP
 
 open B2R2
 open B2R2.FrontEnd.BinLifter
 
 open System.Collections.Generic
-open Endbr.Cache
-open Endbr.Disasm
+open FunSeeker.Cache
+open FunSeeker.Disasm
 
 let returnTwiceDict cache =
   (*

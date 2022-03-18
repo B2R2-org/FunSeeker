@@ -1,4 +1,4 @@
-﻿module Endbr.BinUtil
+﻿module FunSeeker.BinUtil
 
 open System.Collections.Generic
 open B2R2
