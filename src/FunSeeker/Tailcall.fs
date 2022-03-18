@@ -1,10 +1,6 @@
 ﻿module FunSeeker.Tailcall
 
-open B2R2
-open B2R2.FrontEnd.BinLifter
-open System.Collections.Generic
 open FunSeeker.Cache
-open FunSeeker.Disasm
 open FunSeeker.BinUtil
 
 let blockEndOf cache addr =

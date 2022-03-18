@@ -1,9 +1,7 @@
 ﻿module FunSeeker.BinUtil
 
-open System.Collections.Generic
 open B2R2
 open B2R2.FrontEnd.BinInterface
-open B2R2.FrontEnd.BinLifter
 
 let createBinHandleFromPath filepath =
   BinHandle.Init (

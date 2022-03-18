@@ -23,7 +23,7 @@ $ dotnet build -c Release
 
 Now, you are ready to run FunSeeker. You can run it with following command
 ```
-$ src/Endbr/bin/Release/net6.0/Endbr [binary_path]
+$ src/FunSeeker/bin/Release/net6.0/FunSeeker [binary_path]
 ```
 
 ## Docker

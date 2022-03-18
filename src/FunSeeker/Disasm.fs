@@ -1,6 +1,5 @@
 ﻿module FunSeeker.Disasm
 
-open System.Collections
 open B2R2
 open B2R2.FrontEnd.BinFile
 open B2R2.FrontEnd.BinInterface

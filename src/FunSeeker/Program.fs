@@ -32,9 +32,6 @@ let main argv =
     elif ty = "type5" then
       reportType5 cache
       printFunctions cache
-    elif ty = "type6" then
-      reportType6 cache
-      printFunctions cache
     elif ty = "fp" then
       reportFP cache
     elif ty = "exception" then

@@ -3,7 +3,6 @@
 open B2R2
 open B2R2.FrontEnd.BinLifter
 
-open System.Collections.Generic
 open FunSeeker.Cache
 open FunSeeker.Disasm
 
