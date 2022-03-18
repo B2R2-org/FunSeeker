@@ -5,27 +5,32 @@ entries. The details of the algorithm is in our paper, "How'd Security Benefit
 Reverse Engineers? The Implication of Intel CET on Function Identification,"
 which will appear in DSN 2022.
 
-## Installation
-FunSeeker is written in F#, so you need to install .NET Core SDK first.
-Also, FunSeeker requires [FSharp.Core
-6.0.1](https://www.nuget.org/packages/FSharp.Core/6.0.1) and
-[B2R2.FrontEnd.BinInterface
-0.6.0-alpha](https://www.nuget.org/packages/B2R2.FrontEnd.BinInterface/0.6.0-alpha)
-packages. You can add those packages by following .NET CLI command.
+## Build & Run
 
-## Usage
+FunSeeker is written in F#, so you need to install [.NET Core SDK
+6.0](https://dotnet.microsoft.com/en-us/download). Also, FunSeeker includes
+following NuGet packages: [FSharp.Core
+](https://www.nuget.org/packages/FSharp.Core/6.0.1) and
+[B2R2.FrontEnd.BinInterface
+](https://www.nuget.org/packages/B2R2.FrontEnd.BinInterface/0.6.0-alpha)
+
+Next, you should download and build FunSeeker.
 ```
 $ git clone git@github.com:B2R2-org/FunSeeker.git
 $ cd FunSeeker/
 $ dotnet build -c Release
-$ src/Endbr/bin/Release/net6.0/Endbr [binary file] type5
+```
+
+Now, you are ready to run FunSeeker. You can run it with following command
+```
+$ src/Endbr/bin/Release/net6.0/Endbr [binary_path]
 ```
 
 ## Docker
 TBD
 
 ## Authors
-This research project has been conducted by [SoftSec Lab](https://softsec.kais.ac.kr) at KAIST
+This research project has been conducted by [SoftSec Lab](https://softsec.kais.ac.kr) at KAIST.
 - Hyungseok Kim
 - Junoh Lee
 - Soomin Kim
