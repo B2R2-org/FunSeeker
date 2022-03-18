@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <WarnOn>3390;$(WarnOn)</WarnOn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Cache.fs" />
+    <Compile Include="BinUtil.fs" />
+    <Compile Include="Disasm.fs" />
+    <Compile Include="EndbrFP.fs" />
+    <Compile Include="Tailcall.fs" />
+    <Compile Include="Report.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="B2R2.FrontEnd.BinInterface" Version="0.6.0-alpha" />
+  </ItemGroup>
+
+
+</Project>
