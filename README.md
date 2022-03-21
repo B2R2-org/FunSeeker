@@ -27,8 +27,11 @@ $ src/Endbr/bin/Release/net6.0/Endbr [binary_path]
 ```
 
 ## Docker
-TBD
-
+You can use Docker image to try out FunSeeker quickly.
+```
+docker build --tag funseeker .
+docker run --rm -v $(pwd)/sample:/workspace funseeker /root/FunSeeker/src/FunSeeker/bin/Release/net6.0/FunSeeker /workspace/ls
+```
 ## Authors
 This research project has been conducted by [SoftSec Lab](https://softsec.kais.ac.kr) at KAIST.
 - Hyungseok Kim
@@ -39,9 +42,11 @@ This research project has been conducted by [SoftSec Lab](https://softsec.kais.a
 
 ## Citation
 If you plan to use FunSeeker in your own research. Please consider citing our paper:
+```
 @INPROCEEDINGS{kim:dsn:2022,
   author = {Hyungseok Kim and Junoh Lee and Soomin Kim and Seungil Jung and Sang Kil Cha},
   title = {How'd Security Benefit Reverse Engineers? The Implication of Intel CET on Function Identification},
   booktitle = dsn,
   year = 2022
 }
+```
