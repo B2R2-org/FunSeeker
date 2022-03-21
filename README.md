@@ -30,7 +30,7 @@ $ src/FunSeeker/bin/Release/net6.0/FunSeeker [binary_path]
 You can use Docker image to try out FunSeeker quickly.
 ```
 docker build --tag funseeker .
-docker run --rm -v $(pwd)/sample:/workspace funseeker /root/FunSeeker/src/FunSeeker/bin/Release/net6.0/FunSeeker /workspace/ls
+docker run --rm funseeker /root/FunSeeker/src/FunSeeker/bin/Release/net6.0/FunSeeker [binary_path]
 ```
 ## Authors
 This research project has been conducted by [SoftSec Lab](https://softsec.kais.ac.kr) at KAIST.
