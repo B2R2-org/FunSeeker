@@ -5,7 +5,7 @@ entries. The details of the algorithm is in our paper, "How'd Security Benefit
 Reverse Engineers? The Implication of Intel CET on Function Identification,"
 which will appear in DSN 2022.
 
-## Build & Run
+### Build & Run
 
 FunSeeker is written in F#, so you need to install [.NET Core SDK
 6.0](https://dotnet.microsoft.com/en-us/download). Also, FunSeeker includes
@@ -26,17 +26,17 @@ Now, you are ready to run FunSeeker. You can run it with following command
 $ src/FunSeeker/bin/Release/net6.0/FunSeeker [binary_path]
 ```
 
-## Docker
+### Docker
 You can use Docker image to try out FunSeeker quickly.
 ```
 docker build --tag funseeker .
 docker run --rm funseeker /FunSeeker/src/FunSeeker/bin/Release/net6.0/FunSeeker [binary_path]
 ```
 
-# Dataset
+### Dataset
 You can download our [dataset](https://drive.google.com/file/d/1tHv-Mws-rxy_3ErjSR6VS-0-xAKd0R0C/view?usp=sharing) which contains non-stripped binaries, stripped binaries and function list files.
 
-## Authors
+### Authors
 This research project has been conducted by [SoftSec Lab](https://softsec.kais.ac.kr) at KAIST.
 - Hyungseok Kim
 - Junoh Lee
@@ -44,7 +44,7 @@ This research project has been conducted by [SoftSec Lab](https://softsec.kais.a
 - Seungil Jung
 - Sang Kil Cha
 
-## Citation
+### Citation
 If you plan to use FunSeeker in your own research. Please consider citing our paper:
 ```
 @INPROCEEDINGS{kim:dsn:2022,
