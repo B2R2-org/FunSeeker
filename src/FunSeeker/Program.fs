@@ -1,7 +1,7 @@
-open Endbr.Cache
-open Endbr.BinUtil
-open Endbr.Disasm
-open Endbr.Report
+open FunSeeker.Cache
+open FunSeeker.BinUtil
+open FunSeeker.Disasm
+open FunSeeker.Report
 
 [<EntryPoint>]
 let main argv =
@@ -31,9 +31,6 @@ let main argv =
       printFunctions cache
     elif ty = "type5" then
       reportType5 cache
-      printFunctions cache
-    elif ty = "type6" then
-      reportType6 cache
       printFunctions cache
     elif ty = "fp" then
       reportFP cache

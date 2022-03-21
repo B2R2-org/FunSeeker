@@ -1,11 +1,7 @@
-﻿module Endbr.Tailcall
+﻿module FunSeeker.Tailcall
 
-open B2R2
-open B2R2.FrontEnd.BinLifter
-open System.Collections.Generic
-open Endbr.Cache
-open Endbr.Disasm
-open Endbr.BinUtil
+open FunSeeker.Cache
+open FunSeeker.BinUtil
 
 let blockEndOf cache addr =
   let rec loop addr =

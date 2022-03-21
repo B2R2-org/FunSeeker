@@ -1,13 +1,12 @@
-﻿module Endbr.Disasm
+﻿module FunSeeker.Disasm
 
-open System.Collections
 open B2R2
 open B2R2.FrontEnd.BinFile
 open B2R2.FrontEnd.BinInterface
 open B2R2.FrontEnd.BinLifter
 open B2R2.FrontEnd.BinLifter.Intel
-open Endbr.Cache
-open Endbr.BinUtil
+open FunSeeker.Cache
+open FunSeeker.BinUtil
 
 
 let getCallTarget (ins: Instruction) =

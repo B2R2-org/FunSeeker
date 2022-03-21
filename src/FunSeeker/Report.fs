@@ -1,13 +1,9 @@
-﻿module Endbr.Report
+﻿module FunSeeker.Report
 
 open B2R2
-open B2R2.FrontEnd.BinFile
-open B2R2.FrontEnd.BinInterface
-open B2R2.FrontEnd.BinLifter
-open B2R2.FrontEnd.BinLifter.Intel
-open Endbr.Cache
-open Endbr.EndbrFP
-open Endbr.Tailcall
+open FunSeeker.Cache
+open FunSeeker.EndbrFP
+open FunSeeker.Tailcall
 
 let printFunctions cache =
   cache.FunctionCache
@@ -41,12 +37,6 @@ let reportType5 cache =
   cache.FunctionCache.UnionWith(cache.CallTargetCache) |> ignore
   cache.FunctionCache.UnionWith(cache.EndbrCache) |> ignore
   tailCallAnalysis cache
-
-let reportType6 cache =
-  eliminateEndbrFP cache
-  cache.FunctionCache.UnionWith(cache.CallTargetCache) |> ignore
-  cache.FunctionCache.UnionWith(cache.EndbrCache) |> ignore
-  tailCallAnalysis2 cache
 
 let reportFP cache =
   eliminateEndbrFP cache
