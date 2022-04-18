@@ -42,7 +42,7 @@ This research project has been conducted by [SoftSec Lab](https://softsec.kais.a
 - Junoh Lee
 - Soomin Kim
 - Seungil Jung
-- Sang Kil Cha
+- [Sang Kil Cha](https://softsec.kaist.ac.kr/~sangkilc/)
 
 ### Citation
 If you plan to use FunSeeker in your own research. Please consider citing our [paper](https://softsec.kaist.ac.kr/~sangkilc/papers/kim-dsn2022.pdf):
