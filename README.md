@@ -14,9 +14,9 @@ following NuGet packages: [FSharp.Core
 [B2R2.FrontEnd.BinInterface
 ](https://www.nuget.org/packages/B2R2.FrontEnd.BinInterface/0.6.0-alpha)
 
-Next, you should download and build FunSeeker.
+Next, you should download and build FunSeeker as follows.
 ```
-$ git clone git@github.com:B2R2-org/FunSeeker.git
+$ git clone https://github.com/B2R2-org/FunSeeker.git
 $ cd FunSeeker/
 $ dotnet build -c Release
 ```
@@ -45,7 +45,7 @@ This research project has been conducted by [SoftSec Lab](https://softsec.kais.a
 - [Sang Kil Cha](https://softsec.kaist.ac.kr/~sangkilc/)
 
 ### Citation
-If you plan to use FunSeeker in your own research. Please consider citing our [paper](https://softsec.kaist.ac.kr/~sangkilc/papers/kim-dsn2022.pdf):
+If you plan to use FunSeeker in your own research, please consider citing our [paper](https://softsec.kaist.ac.kr/~sangkilc/papers/kim-dsn2022.pdf):
 ```
 @INPROCEEDINGS{kim:dsn:2022,
   author = {Hyungseok Kim and Junoh Lee and Soomin Kim and Seungil Jung and Sang Kil Cha},
