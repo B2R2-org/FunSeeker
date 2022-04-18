@@ -1,13 +1,13 @@
 # FunSeeker
-FunSeeker is function identification tool for Intel CET-enabled binary.
-FunSeeker leverages the patterns of CET-relevant instructions to find function
-entries. The details of the algorithm is in our paper, "How'd Security Benefit
+FunSeeker is function identification tool for Intel CET-enabled binaries.
+FunSeeker leverages patterns of CET-relevant instructions to find function
+entries. The details of the algorithm is in our [paper](https://softsec.kaist.ac.kr/~sangkilc/papers/kim-dsn2022.pdf), "How'd Security Benefit
 Reverse Engineers? The Implication of Intel CET on Function Identification,"
 which will appear in DSN 2022.
 
 ### Build & Run
 
-FunSeeker is written in F#, so you need to install [.NET Core SDK
+FunSeeker is written in F#, so you need to install [.NET SDK
 6.0](https://dotnet.microsoft.com/en-us/download). Also, FunSeeker includes
 following NuGet packages: [FSharp.Core
 ](https://www.nuget.org/packages/FSharp.Core/6.0.1) and
@@ -45,7 +45,7 @@ This research project has been conducted by [SoftSec Lab](https://softsec.kais.a
 - Sang Kil Cha
 
 ### Citation
-If you plan to use FunSeeker in your own research. Please consider citing our paper:
+If you plan to use FunSeeker in your own research. Please consider citing our [paper](https://softsec.kaist.ac.kr/~sangkilc/papers/kim-dsn2022.pdf):
 ```
 @INPROCEEDINGS{kim:dsn:2022,
   author = {Hyungseok Kim and Junoh Lee and Soomin Kim and Seungil Jung and Sang Kil Cha},
