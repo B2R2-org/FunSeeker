@@ -37,7 +37,7 @@ docker run --rm funseeker /FunSeeker/src/FunSeeker/bin/Release/net6.0/FunSeeker 
 You can download our [dataset](https://drive.google.com/file/d/1tHv-Mws-rxy_3ErjSR6VS-0-xAKd0R0C/view?usp=sharing) which contains non-stripped binaries, stripped binaries and function list files.
 
 ### Authors
-This research project has been conducted by [SoftSec Lab](https://softsec.kais.ac.kr) at KAIST.
+This research project has been conducted by [SoftSec Lab](https://softsec.kais.ac.kr) and [CSRC](https://csrc.kaist.ac.kr) at KAIST.
 - Hyungseok Kim
 - Junoh Lee
 - Soomin Kim
