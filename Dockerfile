@@ -12,10 +12,6 @@ RUN apt-get update; \
     apt-get update && \
     apt-get install -y dotnet-sdk-6.0
 
-RUN mkdir FunSeeker
-COPY FunSeeker.sln FunSeeker
-COPY src FunSeeker/src
-#RUN git clone https://github.com:B2R2-org/FunSeeker.git
-
-RUN cd FunSeeker && \
+RUN git clone https://github.com/B2R2-org/FunSeeker.git;\
+    cd FunSeeker && \
     dotnet build -c Release
