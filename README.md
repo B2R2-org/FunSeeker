@@ -40,7 +40,7 @@ You can download our [dataset](https://drive.google.com/file/d/1tHv-Mws-rxy_3Erj
 This research project has been conducted by [SoftSec Lab](https://softsec.kais.ac.kr) and [CSRC](https://csrc.kaist.ac.kr) at KAIST.
 - Hyungseok Kim
 - Junoh Lee
-- Soomin Kim
+- [Soomin Kim](https://softsec.kaist.ac.kr/~soomink/)
 - Seungil Jung
 - [Sang Kil Cha](https://softsec.kaist.ac.kr/~sangkilc/)
 
