@@ -1,9 +1,9 @@
 # FunSeeker
 FunSeeker is function identification tool for Intel CET-enabled binaries.
 FunSeeker leverages patterns of CET-relevant instructions to find function
-entries. The details of the algorithm is in our [paper](https://softsec.kaist.ac.kr/~sangkilc/papers/kim-dsn2022.pdf), "How'd Security Benefit
-Reverse Engineers? The Implication of Intel CET on Function Identification,"
-which will appear in DSN 2022.
+entries. The details of the algorithm is in our [paper](https://softsec.kaist.ac.kr/~sangkilc/papers/kim-dsn2022.pdf),
+"How'd Security Benefit Reverse Engineers? The Implication of Intel CET on
+Function Identification," which will appear in DSN 2022.
 
 ### Build & Run
 
