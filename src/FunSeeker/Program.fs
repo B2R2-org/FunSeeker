@@ -5,14 +5,13 @@ open FunSeeker.Report
 
 [<EntryPoint>]
 let main argv =
-  let ftype = System.IO.File.GetAttributes argv.[0]
-  if ftype = System.IO.FileAttributes.Normal && Array.length argv = 1 then
+  if Array.length argv <> 2 then
     let hdl = createBinHandleFromPath argv.[0]
     let cache = Cache.initCache hdl
     parse cache
     reportType4 cache
     printFunctions cache
-  elif ftype = System.IO.FileAttributes.Normal && Array.length argv = 2 then
+  else
     let ty = argv.[1]
     let hdl = createBinHandleFromPath argv.[0]
     let cache = Cache.initCache hdl
@@ -42,4 +41,3 @@ let main argv =
     elif ty = "jump" then
       reportJumpTarget cache
     else 0
-  else 0
