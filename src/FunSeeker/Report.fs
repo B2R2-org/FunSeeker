@@ -71,3 +71,7 @@ let reportJumpTarget cache =
 let reportEndbr cache =
   eliminateEndbrFP cache
   cache.FunctionCache.UnionWith(cache.EndbrCache) |> ignore
+
+let reportSupersetEndbr cache =
+  eliminateSupersetEndbrFP cache
+  cache.FunctionCache.UnionWith(cache.EndbrCache) |> ignore

@@ -71,3 +71,31 @@ let parse cache =
     if s.Size > 0UL then
       let bp = BinaryPointer.OfSection s
       disasm hdl bp)
+
+let superparse cache =
+  let rec superdisasm hdl bp =
+    if BinaryPointer.IsValid bp then
+      match BinHandle.TryParseInstr (hdl, bp=bp) with
+      | Ok (ins) ->
+        // let bp' = BinaryPointer.Advance bp (int ins.Length)
+        let bp' = BinaryPointer.Advance bp 1
+        if isEndbr ins && isTextAddr cache.Handle bp.Addr then
+          Cache.setEndbrCache cache bp.Addr
+        Cache.setLinearCache cache bp.Addr ins
+        superdisasm hdl bp'
+      | Error _ ->
+        let bp' = BinaryPointer.Advance bp 1
+        superdisasm hdl bp'
+    else ()
+  let hdl = cache.Handle
+
+  cache.Handle.FileInfo.ExceptionTable
+  |> ARMap.iter (fun funcRange _ ->
+    Cache.setExceptionCache cache funcRange.Min (int (funcRange.Max - funcRange.Min + 1UL))
+  )
+
+  hdl.FileInfo.GetExecutableSections ()
+  |> Seq.iter (fun s ->
+    if s.Size > 0UL then
+      let bp = BinaryPointer.OfSection s
+      superdisasm hdl bp)

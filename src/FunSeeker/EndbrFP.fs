@@ -84,3 +84,26 @@ let lookPrevInst cache =
 let eliminateEndbrFP cache =
   lookPrevInst cache
   eliminateExceptions cache
+
+
+let lookSupersetPrevInst cache =
+  returnTwiceDict cache
+  let prevInstAddr addr =
+    match SortedList.findGreatestLowerBoundKey (addr - 4UL) cache.LinearCache with
+    | Some prevAddr -> prevAddr
+    | _ -> 0UL
+  cache.EndbrCache.RemoveWhere (fun addr ->
+    let prevAddr = prevInstAddr addr
+    let prevInst = cache.LinearCache.[prevAddr]
+    if isReturnTwice cache prevInst then
+      cache.NumReturnTwice <- cache.NumReturnTwice + 1
+      true
+    /// elif isFallThrough cache prevInst then false
+    else false
+  )
+  |> ignore
+
+
+let eliminateSupersetEndbrFP cache =
+  lookSupersetPrevInst cache
+  eliminateExceptions cache
