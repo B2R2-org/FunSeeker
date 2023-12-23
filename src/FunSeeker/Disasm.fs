@@ -75,9 +75,9 @@ let parse cache =
       disasm hdl bp)
 
 
-let hasENDBR64 hdl (target: Addr) =
+let hasENDBR hdl (target: Addr) =
     let data = BinHandle.ReadUInt (hdl, target, 4)
-    uint32 data = (uint32 0xFA1E0FF3)
+    uint32 data = (uint32 0xFA1E0FF3) || uint32 data = (uint32 0xFB1E0FF3)
 
 let superparse cache =
   let rec superdisasm hdl bp =
@@ -85,7 +85,7 @@ let superparse cache =
       try
         match BinHandle.TryParseInstr (hdl, bp=bp) with
         | Ok (ins) ->
-          if isEndbr ins && isTextAddr cache.Handle bp.Addr then
+          if hasENDBR hdl bp.Addr && isEndbr ins && isTextAddr cache.Handle bp.Addr then
             Cache.setEndbrCache cache bp.Addr
           Cache.setLinearCache cache bp.Addr ins  
         | Error _ -> ()
