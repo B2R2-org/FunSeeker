@@ -10,9 +10,11 @@ open FunSeeker.BinUtil
 
 
 let getCallTarget (ins: Instruction) =
-  match ins.DirectBranchTarget () |> Utils.tupleToOpt with
-  | None -> 0UL
-  | Some target -> target
+  try
+    match ins.DirectBranchTarget () |> Utils.tupleToOpt with
+    | None -> 0UL
+    | Some target -> target
+  with _ -> 0UL
 
 let isEndbr (ins: Instruction) =
   let intelInst = ins :?> IntelInstruction
