@@ -78,7 +78,7 @@ let hasENDBR hdl (target: Addr) =
     let data = BinHandle.ReadUInt (hdl, target, 4)
     uint32 data = (uint32 0xFA1E0FF3) || uint32 data = (uint32 0xFB1E0FF3)
 
-let superparse cache =
+let supersetDisassembly cache =
   let rec superdisasm hdl bp =
     if BinaryPointer.IsValid bp then
       try

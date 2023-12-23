@@ -51,7 +51,7 @@ let reportEndbr cache =
   eliminateEndbrFP cache
   cache.FunctionCache.UnionWith(cache.EndbrCache) |> ignore
 
-let reportSupersetEndbr cache =
+let reportCodePointerList cache =
   eliminateSupersetEndbrFP cache
   cache.FunctionCache.UnionWith(cache.EndbrCache) |> ignore
   

@@ -16,11 +16,11 @@ let main argv =
     let hdl = createBinHandleFromPath argv.[0]
     let cache = Cache.initCache hdl
     if ty = "superendbr" then
-      superparse cache
-      reportSupersetEndbr cache
+      supersetDisassembly cache
+      reportCodePointerList cache
       printFunctions cache
     elif ty = "superset" then
-      superparse cache
+      supersetDisassembly cache
       reportSuperset cache
       printFunctions cache
     else
