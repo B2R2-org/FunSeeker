@@ -8,7 +8,6 @@ open B2R2.FrontEnd.BinLifter.Intel
 open FunSeeker.Cache
 open FunSeeker.BinUtil
 
-
 let getCallTarget (ins: Instruction) =
   try
     match ins.DirectBranchTarget () |> Utils.tupleToOpt with
@@ -92,10 +91,6 @@ let superparse cache =
       with _ -> ()
       let bp' = BinaryPointer.Advance bp 1
       superdisasm hdl bp'
-      //if hasENDBR64 hdl bp.Addr && isTextAddr cache.Handle bp.Addr then
-      //  Cache.setEndbrCache cache bp.Addr
-      //let bp' = BinaryPointer.Advance bp 1
-      //superdisasm hdl bp'
       
   let hdl = cache.Handle
 

@@ -11,7 +11,6 @@
     <Compile Include="BinUtil.fs" />
     <Compile Include="Disasm.fs" />
     <Compile Include="EndbrFP.fs" />
-    <Compile Include="Tailcall.fs" />
     <Compile Include="Report.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>

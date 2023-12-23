@@ -3,7 +3,6 @@
 open B2R2
 open FunSeeker.Cache
 open FunSeeker.EndbrFP
-open FunSeeker.Tailcall
 
 let printFunctions cache =
   cache.FunctionCache
@@ -12,31 +11,11 @@ let printFunctions cache =
   )
   0
 
-/// Direct Branch Target
-let reportType1 cache =
-  cache.FunctionCache.UnionWith(cache.CallTargetCache)
-
-/// Endbr
-let reportType2 cache =
-  cache.FunctionCache.UnionWith(cache.EndbrCache)
-
-/// DBT + Endbr
-let reportType3 cache =
-  cache.FunctionCache.UnionWith(cache.CallTargetCache) |> ignore
-  cache.FunctionCache.UnionWith(cache.EndbrCache) |> ignore
-
 /// DBT + Endbr + ReturnTwice + Exception
 let reportType4 cache =
   eliminateEndbrFP cache
   cache.FunctionCache.UnionWith(cache.CallTargetCache) |> ignore
   cache.FunctionCache.UnionWith(cache.EndbrCache) |> ignore
-
-/// DBT + Endbr + ReturnTwice + Exception + TailCall analysis
-let reportType5 cache =
-  eliminateEndbrFP cache
-  cache.FunctionCache.UnionWith(cache.CallTargetCache) |> ignore
-  cache.FunctionCache.UnionWith(cache.EndbrCache) |> ignore
-  tailCallAnalysis cache
 
 let reportFP cache =
   eliminateEndbrFP cache

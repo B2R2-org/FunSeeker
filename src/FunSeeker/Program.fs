@@ -21,24 +21,7 @@ let main argv =
       printFunctions cache
     else
       parse cache
-      if ty = "type1" then
-        reportType1 cache
-        printFunctions cache
-      elif ty = "type2" then
-        reportType2 cache
-        printFunctions cache
-      elif ty = "type3" then
-        reportType3 cache
-        printFunctions cache
-      elif ty = "type4" then
-        reportType4 cache
-        printFunctions cache
-      elif ty = "type5" then
-        reportType5 cache
-        printFunctions cache
-      elif ty = "fp" then
-        reportFP cache
-      elif ty = "exception" then
+      if ty = "exception" then
         reportException cache
       elif ty = "endbr" then
         reportEndbr cache
