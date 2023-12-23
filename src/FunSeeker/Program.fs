@@ -19,6 +19,10 @@ let main argv =
       superparse cache
       reportSupersetEndbr cache
       printFunctions cache
+    elif ty = "superset" then
+      superparse cache
+      reportSuperset cache
+      printFunctions cache
     else
       parse cache
       if ty = "exception" then
