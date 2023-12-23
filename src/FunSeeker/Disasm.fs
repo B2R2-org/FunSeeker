@@ -72,21 +72,29 @@ let parse cache =
       let bp = BinaryPointer.OfSection s
       disasm hdl bp)
 
+
+let hasENDBR64 hdl (target: Addr) =
+    let data = BinHandle.ReadUInt (hdl, target, 4)
+    uint32 data = (uint32 0xFA1E0FF3)
+
 let superparse cache =
   let rec superdisasm hdl bp =
     if BinaryPointer.IsValid bp then
-      match BinHandle.TryParseInstr (hdl, bp=bp) with
-      | Ok (ins) ->
-        // let bp' = BinaryPointer.Advance bp (int ins.Length)
-        let bp' = BinaryPointer.Advance bp 1
-        if isEndbr ins && isTextAddr cache.Handle bp.Addr then
-          Cache.setEndbrCache cache bp.Addr
-        Cache.setLinearCache cache bp.Addr ins
-        superdisasm hdl bp'
-      | Error _ ->
-        let bp' = BinaryPointer.Advance bp 1
-        superdisasm hdl bp'
-    else ()
+      try
+        match BinHandle.TryParseInstr (hdl, bp=bp) with
+        | Ok (ins) ->
+          if isEndbr ins && isTextAddr cache.Handle bp.Addr then
+            Cache.setEndbrCache cache bp.Addr
+          Cache.setLinearCache cache bp.Addr ins  
+        | Error _ -> ()
+      with _ -> ()
+      let bp' = BinaryPointer.Advance bp 1
+      superdisasm hdl bp'
+      //if hasENDBR64 hdl bp.Addr && isTextAddr cache.Handle bp.Addr then
+      //  Cache.setEndbrCache cache bp.Addr
+      //let bp' = BinaryPointer.Advance bp 1
+      //superdisasm hdl bp'
+      
   let hdl = cache.Handle
 
   cache.Handle.FileInfo.ExceptionTable
